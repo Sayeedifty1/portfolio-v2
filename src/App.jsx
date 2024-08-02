@@ -4,11 +4,13 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 import Header from "./components/Header";
 import Container from "./utilities/container";
+import FeaturedProjects from "./components/FeaturedProjects";
 
 function App() {
   return (
     <Container>
       <Header />
+      <FeaturedProjects />
     </Container>
   );
 }

@@ -3,7 +3,11 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const Container = ({ children }) => {
-  return <div className="w-4/5 mx-auto">{children}</div>;
+  return (
+    <div className="flex justify-center">
+      <div className="w-full max-w-4xl">{children}</div>
+    </div>
+  );
 };
 
 Container.propTypes = {
