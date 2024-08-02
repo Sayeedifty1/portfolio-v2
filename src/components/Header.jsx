@@ -1,26 +1,54 @@
+// src/components/Header.jsx
 import React from "react";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaArrowRight, FaSun } from "react-icons/fa";
 
 const Header = () => {
   return (
-    <header className="bg-gray-800 text-white p-4">
-      <div className="">
-        <h1 className="text-2xl font-bold">Your Name</h1>
-        <div className="flex space-x-4">
+    <header className="bg-[#202020] text-white p-8">
+      <div className="text-center">
+        <h1 className="text-2xl font-semibold mb-[132px]">SAYEED IFTY</h1>
+        <h2 className="mt-4 text-4xl font-bold mb-[32px]">
+          HACK YOUR PRODUCTIVITY
+          <br /> WITH NOTION
+        </h2>
+        <p className="mt-4 text-lg">
+          Discover the best Notion Templates to help you stay
+          <br /> organized and productive
+        </p>
+        <div className="mt-8 flex justify-center space-x-4">
           <a
-            href="https://github.com/yourprofile"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#notion-templates"
+            className="border border-white text-white hover:text-gray-900 px-6 py-2 rounded-full flex items-center space-x-2 hover:bg-white transition"
           >
-            <FaGithub size={24} />
+            <span>Notion Templates</span> <FaArrowRight />
           </a>
           <a
-            href="https://linkedin.com/in/yourprofile"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#learn-notion"
+            className="border border-white text-white hover:text-gray-900 px-6 py-2 rounded-full flex items-center space-x-2 hover:bg-white transition"
           >
-            <FaLinkedin size={24} />
+            <span>Learn Notion</span> <FaArrowRight />
           </a>
+        </div>
+        <div className="flex justify-center mt-[80px]">
+          <div className="w-[60%]">
+            <div className="mt-8 flex justify-evenly border border-white rounded-full py-2 px-4 mx-auto">
+              <a href="#home" className="text-white hover:text-gray-300">
+                Home
+              </a>
+              <a href="#projects" className="text-white hover:text-gray-300">
+                Projects
+              </a>
+              <a href="#skills" className="text-white hover:text-gray-300">
+                Skills
+              </a>
+              <a href="#about" className="text-white hover:text-gray-300">
+                About
+              </a>
+              <div className="flex items-center justify-center w-8 h-8 bg-gray-800 rounded-full border border-gray-600 ml-4">
+                <FaSun className="text-white" />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </header>
