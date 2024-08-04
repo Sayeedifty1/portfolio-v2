@@ -5,3 +5,8 @@
 body {
   @apply bg-site-bg text-white;
 }
+
+.text-outline {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+}

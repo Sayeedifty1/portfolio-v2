@@ -6,14 +6,18 @@ import Header from "./components/Header";
 import Container from "./utilities/container";
 import FeaturedProjects from "./components/FeaturedProjects";
 import Skills from "./components/Skills";
+import Experience from "./components/Experience ";
 
 function App() {
   return (
-    <Container>
-      <Header />
-      <FeaturedProjects />
-      <Skills />
-    </Container>
+    <div>
+      <Container>
+        <Header />
+        <FeaturedProjects />
+        <Skills />
+      </Container>
+      <Experience />
+    </div>
   );
 }
 
