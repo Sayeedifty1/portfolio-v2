@@ -11,7 +11,7 @@ const SkillCards = ({
   return (
     <div className=" hover:bg-gray-200 hover:text-gray-800  border hover:border-black p-6 rounded-xl shadow-lg max-w-md mx-auto">
       <div className="flex items-center justify-between mb-4">
-        <h2 className="text-2xl   ">{title}</h2>
+        <h2 className="text-2xl text-left">{title}</h2>
         <Icon className=" w-6 h-6" />
       </div>
       <div className="flex mb-4">
