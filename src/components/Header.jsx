@@ -8,25 +8,25 @@ const Header = () => {
       <div className="text-center">
         <h1 className="text-2xl font-semibold mb-[132px]">SAYEED IFTY</h1>
         <h2 className="mt-4 text-4xl font-bold mb-[32px]">
-          HACK YOUR PRODUCTIVITY
-          <br /> WITH NOTION
+          Crafting Digital Solutions with <br /> MERN Precision
         </h2>
         <p className="mt-4 text-lg">
-          Discover the best Notion Templates to help you stay
-          <br /> organized and productive
+          Dive into a collection of innovative projects and solutions crafted
+          with the MERN stack. <br /> Developing impactful and user-centric
+          solutions .
         </p>
         <div className="mt-8 flex justify-center space-x-4">
           <a
             href="#notion-templates"
             className="border border-white text-white hover:text-gray-900 px-6 py-2 rounded-full flex items-center space-x-2 hover:bg-white transition"
           >
-            <span>Notion Templates</span> <FaArrowRight />
+            <span>Download Resume</span> <FaArrowRight />
           </a>
           <a
             href="#learn-notion"
             className="border border-white text-white hover:text-gray-900 px-6 py-2 rounded-full flex items-center space-x-2 hover:bg-white transition"
           >
-            <span>Learn Notion</span> <FaArrowRight />
+            <span>Contact</span> <FaArrowRight />
           </a>
         </div>
         <div className="flex justify-center mt-[80px]">
