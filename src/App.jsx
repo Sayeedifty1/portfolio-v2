@@ -5,12 +5,14 @@ import "./App.css";
 import Header from "./components/Header";
 import Container from "./utilities/container";
 import FeaturedProjects from "./components/FeaturedProjects";
+import Skills from "./components/Skills";
 
 function App() {
   return (
     <Container>
       <Header />
       <FeaturedProjects />
+      <Skills />
     </Container>
   );
 }
