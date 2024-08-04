@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 const Container = ({ children }) => {
   return (
     <div className="flex justify-center">
-      <div className="w-full max-w-4xl">{children}</div>
+      <div className="w-full max-w-[85%]">{children}</div>
     </div>
   );
 };
