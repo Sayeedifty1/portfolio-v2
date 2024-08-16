@@ -22,18 +22,8 @@ const SkillCards = ({
             </li>
           ))}
         </ul>
-        <ul>
-          {categories.right.map((item, index) => (
-            <li key={index} className="text-left ">
-              • {item}
-            </li>
-          ))}
-        </ul>
       </div>
       <p className="mb-4 text-left ">{description}</p>
-      <p href={linkUrl} className="underline text-left ">
-        {linkText}
-      </p>
     </div>
   );
 };

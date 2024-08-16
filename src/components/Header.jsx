@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <header className="bg-[#202020] text-white p-8">
       <div className="text-center">
-        <h1 className="text-2xl font-semibold mb-[132px]">SAYEED IFTY</h1>
+        <h1 className="text-2xl font-semibold mb-[80px]">SAYEED IFTY</h1>
         <h2 className="mt-4 text-4xl font-bold mb-[32px]">
           Crafting Digital Solutions with <br /> MERN Precision
         </h2>
@@ -29,7 +29,7 @@ const Header = () => {
             <span>Contact</span> <FaArrowRight />
           </a>
         </div>
-        <div className="flex justify-center mt-[80px]">
+        <div className="flex justify-center mt-[50px]">
           <div className="w-[60%]">
             <div className="mt-8 flex justify-evenly border border-white rounded-full py-2 px-4 mx-auto">
               <a href="#home" className="text-white hover:text-gray-300">
