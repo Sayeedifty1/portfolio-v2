@@ -10,6 +10,7 @@ import Experience from "./components/Experience ";
 import About from "./components/About";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer";
+import { Repos } from "./components/Repos";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <About />
         <FeaturedProjects />
         <Skills />
+        <Repos />
         <Experience />
         <Contact />
       </Container>
