@@ -10,3 +10,63 @@ body {
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: white;
 }
+
+/* About */
+
+.about__wrapper {
+  padding: 8rem 0 15rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.about__heading {
+  text-align: center;
+}
+.about__heading h4 {
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+.about__heading h2 {
+  font-size: 3rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.05em;
+}
+
+.about__heading hr {
+  border: 2px solid;
+  width: 100px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.about__content {
+  text-align: center;
+}
+.about__content h3 {
+  font-family: "EuroStyle Normal", sans-serif;
+  font-size: 1.8rem;
+  letter-spacing: 0.2em;
+}
+.about__content p {
+  font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 30px;
+  letter-spacing: 0.05em;
+}
+
+.heading {
+  font-family: "EuroStyle Normal", sans-serif;
+  font-size: 3rem;
+  letter-spacing: 0.2em;
+}
+.font {
+  font-family: "EuroStyle Normal", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}

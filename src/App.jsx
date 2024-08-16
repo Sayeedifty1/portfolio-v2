@@ -7,12 +7,14 @@ import Container from "./utilities/container";
 import FeaturedProjects from "./components/FeaturedProjects";
 import Skills from "./components/Skills";
 import Experience from "./components/Experience ";
+import About from "./components/About";
 
 function App() {
   return (
     <div>
       <Container>
         <Header />
+        <About />
         <FeaturedProjects />
         <Skills />
       </Container>

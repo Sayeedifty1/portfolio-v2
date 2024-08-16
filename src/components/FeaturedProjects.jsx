@@ -3,7 +3,7 @@ import Card from "../utilities/Card";
 
 const FeaturedProjects = () => {
   return (
-    <div className="text-white py-8 mt-[150px]">
+    <div className="text-white py-8 ">
       <h4 className="text-base mb-2">MY WORK</h4>
       <h2 className="text-5xl mb-[100px]">Featured Projects</h2>
       {/*  project cards  */}
