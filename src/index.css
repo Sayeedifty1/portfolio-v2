@@ -11,6 +11,13 @@ body {
   -webkit-text-stroke-color: white;
 }
 
+/* gradient */
+.gradient {
+  background: linear-gradient(135deg, #df26c8, #fa4fa1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 /* About */
 
 .about__wrapper {
@@ -44,6 +51,9 @@ body {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
+  background: linear-gradient(135deg, #df26c8, #fa4fa1);
+  height: 6px;
+  border: none;
 }
 .about__content {
   text-align: center;

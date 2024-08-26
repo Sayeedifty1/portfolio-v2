@@ -8,7 +8,8 @@ const Header = () => {
       <div className="text-center">
         <h1 className="text-2xl font-semibold mb-[80px]">SAYEED IFTY</h1>
         <h2 className="mt-4 text-4xl font-bold mb-[32px]">
-          Crafting Digital Solutions with <br /> MERN Precision
+          Crafting Digital Solutions with <br />{" "}
+          <span className="gradient">MERN Precision</span>
         </h2>
         <p className="mt-4 text-lg">
           Dive into a collection of innovative projects and solutions crafted
