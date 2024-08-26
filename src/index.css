@@ -35,7 +35,7 @@ body {
   text-transform: uppercase;
   font-size: 1.4rem;
   letter-spacing: 0.05em;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.1rem;
 }
 
 .about__heading h2 {
@@ -62,12 +62,15 @@ body {
   font-family: "EuroStyle Normal", sans-serif;
   font-size: 1.8rem;
   letter-spacing: 0.2em;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 .about__content p {
   font-weight: 400;
   font-size: 1.3rem;
   line-height: 30px;
   letter-spacing: 0.05em;
+  margin-top: 1rem;
 }
 
 .heading {
@@ -79,4 +82,25 @@ body {
   font-family: "EuroStyle Normal", sans-serif;
   font-weight: 400;
   letter-spacing: 0.02em;
+}
+
+.small-heading {
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.1rem;
+}
+.main-heading {
+  font-size: 3rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.05em;
+}
+.desc {
+  font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 30px;
+  letter-spacing: 0.05em;
+  margin-top: 1rem;
 }

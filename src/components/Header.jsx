@@ -6,12 +6,12 @@ const Header = () => {
   return (
     <header className="bg-[#202020] text-white p-8">
       <div className="text-center">
-        <h1 className="text-2xl font-semibold mb-[80px]">SAYEED IFTY</h1>
-        <h2 className="mt-4 text-4xl font-bold mb-[32px]">
-          Crafting Digital Solutions with <br />{" "}
+        <h1 className="small-heading">SAYEED IFTY</h1>
+        <h2 className="main-heading">
+          Crafting Digital Solutions with <br />
           <span className="gradient">MERN Precision</span>
         </h2>
-        <p className="mt-4 text-lg">
+        <p className="desc">
           Dive into a collection of innovative projects and solutions crafted
           with the MERN stack. <br /> Developing impactful and user-centric
           solutions .

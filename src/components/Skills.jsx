@@ -51,11 +51,11 @@ const Skills = () => {
   return (
     <div className="mt-[100px]">
       <div className="text-left mb-[50px]">
-        <h1 className="text-6xl font-medium mb-[34px]">Skills & Expertise</h1>
-        <p>
-          We build website that drives traffic, engagement and conversion.{" "}
+        <h1 className="main-heading">Skills & Expertise</h1>
+        <p className="desc">
+          We build website that drives traffic, engagement and conversion.
           <br />
-          Building the frictionless customer journey.{" "}
+          Building the frictionless customer journey.
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
