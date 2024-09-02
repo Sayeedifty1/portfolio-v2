@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import { FaCode, FaStar } from "react-icons/fa";
 import { BiGitRepoForked } from "react-icons/bi";
+import AnimationHook from "../hooks/AnimationHook";
 
 function Repository({
   html_url,
@@ -139,61 +140,63 @@ export function Repos() {
   }, []);
 
   return (
-    <section
-      ref={ref}
-      tabIndex="-1"
-      className="relative max-w-7xl mx-auto px-4 focus:outline-none sm:px-3 md:px-5 my-60"
-    >
-      <h2
-        data-aos="zoom-in"
-        className="text-3xl lg:text-4xl font-bold text-center mt-10"
+    <AnimationHook>
+      <section
+        ref={ref}
+        tabIndex="-1"
+        className="relative max-w-7xl mx-auto px-4 focus:outline-none sm:px-3 md:px-5 my-60"
       >
-        GitHub Repos
-      </h2>
-      <h4
-        data-aos="zoom-in"
-        className="text-xl lg:text-2xl text-center mt-4 mb-8"
-      >
-        <span>Things</span> <span>I've been working on so far</span>
-      </h4>
-      <div
-        ref={inViewRef}
-        className={clsx(
-          "grid grid-cols-1 gap-6 lg:gap-8 sm:grid-cols-2 lg:grid-cols-3 mt-12",
-          !expanded && "max-h-[36rem] lg:max-h-[24rem] overflow-hidden"
-        )}
-      >
-        {/* sort github repos by last modified date */}
-        {repositories
-          ?.sort((a, b) => new Date(b.pushed_at) - new Date(a.pushed_at))
-          .map((column) => (
-            <Repository key={column.name} expanded={expanded} {...column} />
-          ))}
-      </div>
-      <div
-        className={clsx(
-          "inset-x-0 bottom-0 flex justify-center bg-gradient-to-t from-white/10 pb-20 lg:pb-16 pointer-events-none dark:from-neutral-900/0",
-          expanded
-            ? "sticky mt-6 lg:mt-10 "
-            : " absolute -bottom-[136px] lg:-bottom-[120px]",
-          transition && "transition-opacity duration-300",
-          expanded &&
-            (showCollapseButton ? "opacity-100 animate-pulse" : "opacity-0")
-        )}
-      >
-        <button
-          type="button"
-          className={clsx(
-            `dark:text-white  dark:hover:text-gray-200 text-black hover:text-gray-800 px-4 h-12 font-semibold bg-gray-500/5 rounded-lg hover:bg-gray-500/10 transition-all duration-200 border-2 border-primary/70 flex items-center`,
-            transition && "transition-transform",
-            expanded && !showCollapseButton && "translate-y-4",
-            (!expanded || showCollapseButton) && "pointer-events-auto"
-          )}
-          onClick={() => setExpanded(!expanded)}
+        <h2
+          data-aos="zoom-in"
+          className="text-3xl lg:text-4xl font-bold text-center mt-10"
         >
-          {expanded ? "Okay, I get the point" : "Show more..."}
-        </button>
-      </div>
-    </section>
+          GitHub Repos
+        </h2>
+        <h4
+          data-aos="zoom-in"
+          className="text-xl lg:text-2xl text-center mt-4 mb-8"
+        >
+          <span>Things</span> <span>I've been working on so far</span>
+        </h4>
+        <div
+          ref={inViewRef}
+          className={clsx(
+            "grid grid-cols-1 gap-6 lg:gap-8 sm:grid-cols-2 lg:grid-cols-3 mt-12",
+            !expanded && "max-h-[36rem] lg:max-h-[24rem] overflow-hidden"
+          )}
+        >
+          {/* sort github repos by last modified date */}
+          {repositories
+            ?.sort((a, b) => new Date(b.pushed_at) - new Date(a.pushed_at))
+            .map((column) => (
+              <Repository key={column.name} expanded={expanded} {...column} />
+            ))}
+        </div>
+        <div
+          className={clsx(
+            "inset-x-0 bottom-0 flex justify-center bg-gradient-to-t from-white/10 pb-20 lg:pb-16 pointer-events-none dark:from-neutral-900/0",
+            expanded
+              ? "sticky mt-6 lg:mt-10 "
+              : " absolute -bottom-[136px] lg:-bottom-[120px]",
+            transition && "transition-opacity duration-300",
+            expanded &&
+              (showCollapseButton ? "opacity-100 animate-pulse" : "opacity-0")
+          )}
+        >
+          <button
+            type="button"
+            className={clsx(
+              `dark:text-white  dark:hover:text-gray-200 text-black hover:text-gray-800 px-4 h-12 font-semibold bg-gray-500/5 rounded-lg hover:bg-gray-500/10 transition-all duration-200 border-2 border-primary/70 flex items-center`,
+              transition && "transition-transform",
+              expanded && !showCollapseButton && "translate-y-4",
+              (!expanded || showCollapseButton) && "pointer-events-auto"
+            )}
+            onClick={() => setExpanded(!expanded)}
+          >
+            {expanded ? "Okay, I get the point" : "Show more..."}
+          </button>
+        </div>
+      </section>
+    </AnimationHook>
   );
 }
