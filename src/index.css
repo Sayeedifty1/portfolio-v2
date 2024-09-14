@@ -27,7 +27,7 @@ body {
 /* About */
 
 .about__wrapper {
-  padding: 8rem 0 8rem;
+  padding: 4rem 0 8rem;
   display: flex;
   flex-direction: column;
   align-items: center;
