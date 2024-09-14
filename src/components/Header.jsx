@@ -21,7 +21,7 @@ const Header = () => {
       icon: (
         <IconHome className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "#contact",
     },
 
     {
@@ -63,7 +63,7 @@ const Header = () => {
     },
   ];
   return (
-    <header className="bg-[#202020] text-white p-8">
+    <header id="#home" className="bg-[#202020] text-white p-8">
       <div className="text-center">
         <h1 className="small-heading">SAYEED IFTY</h1>
         <h2 className="main-heading">
