@@ -82,12 +82,12 @@ const Header = () => {
           >
             <span>Download Resume</span> <FaArrowRight />
           </button>
-          <a
+          {/* <a
             href="#contact"
             className="border border-white text-white hover:text-gray-900 px-6 py-2 rounded-full flex items-center space-x-2 hover:bg-white transition"
           >
             <span>Contact</span> <FaArrowRight />
-          </a>
+          </a> */}
         </div>
         {/* <div className="flex justify-center mt-[50px]">
           <div className="w-[60%]">
