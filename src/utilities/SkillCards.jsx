@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const SkillCards = ({
   title,
@@ -9,7 +10,10 @@ const SkillCards = ({
   linkUrl,
 }) => {
   return (
-    <div className=" hover:bg-gray-200 hover:text-gray-800  border hover:border-black p-6 rounded-xl shadow-lg max-w-md mx-auto">
+    <motion.div
+      className="hover:bg-gray-200 hover:text-gray-800  border hover:border-black p-6 rounded-xl shadow-lg max-w-md mx-auto"
+      whileHover={{ scale: 1.05 }}
+    >
       <div className="flex items-center justify-between mb-4">
         <h2 className="text-2xl text-left">{title}</h2>
         <Icon className=" w-6 h-6" />
@@ -24,7 +28,7 @@ const SkillCards = ({
         </ul>
       </div>
       <p className="mb-4 text-left ">{description}</p>
-    </div>
+    </motion.div>
   );
 };
 
