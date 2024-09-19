@@ -1,34 +1,52 @@
 import AnimationHook from "../hooks/AnimationHook";
 import Card from "../utilities/Card";
+import projects from "../../project";
+import { useState } from "react";
+import clsx from "clsx";
 
 const FeaturedProjects = () => {
+  const [showAll, setShowAll] = useState(false);
+
+  const handleSeeMoreClick = () => {
+    setShowAll(!showAll);
+  };
+
+  const displayedProjects = showAll ? projects : projects.slice(0, 2);
+
   return (
     <AnimationHook>
       <div className="text-white py-8 ">
         <h4 className="small-heading">MY WORK</h4>
         <h2 className="main-heading mb-[60px]">Featured Projects</h2>
         {/*  project cards  */}
-        <div className="flex gap-8">
-          <Card
-            year={2023}
-            company="BunnyCDN"
-            description="BunnyCDN is a fast CDN tool that comes at a fraction of the cost of traditional Content Delivery Networks, it offers features and performance with a fast global network."
-            from="Thailand"
-            timeframe="2 Weeks"
-            services="Website, Illustration"
-            caseStudiesLink="#" // Replace with actual case studies link
-            websiteLink="https://bunnycdn.com"
-          />
-          <Card
-            year={2023}
-            company="BunnyCDN"
-            description="BunnyCDN is a fast CDN tool that comes at a fraction of the cost of traditional Content Delivery Networks, it offers features and performance with a fast global network."
-            from="Thailand"
-            timeframe="2 Weeks"
-            services="Website, Illustration"
-            caseStudiesLink="#" // Replace with actual case studies link
-            websiteLink="https://bunnycdn.com"
-          />
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          {displayedProjects.map((project) => (
+            <Card
+              key={project.id}
+              year={project.year}
+              name={project.name}
+              img={project.img}
+              description={project.info}
+              from={project.from}
+              timeframe={project.timeframe}
+              services={project.services}
+              caseStudiesLink={project.caseStudiesLink}
+              websiteLink={project.link}
+            />
+          ))}
+        </div>
+        <div className="flex justify-center">
+          <button
+            type="button"
+            className={clsx(
+              `dark:text-white  dark:hover:text-gray-200 text-black hover:text-gray-800 px-4 h-12 font-semibold bg-gray-500/5 rounded-lg hover:bg-gray-500/10 transition-all duration-200 border-2 border-primary/70 flex items-center`,
+              showAll && "translate-y-4",
+              (!showAll || showAll) && "pointer-events-auto"
+            )}
+            onClick={handleSeeMoreClick}
+          >
+            {showAll ? "Collapse" : "Show more"}
+          </button>
         </div>
       </div>
     </AnimationHook>
