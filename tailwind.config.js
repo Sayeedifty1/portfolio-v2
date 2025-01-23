@@ -11,22 +11,18 @@
 //   plugins: [addVariablesForColors],
 // };
 
-const {
-  default: flattenColorPalette,
-} = require("tailwindcss/lib/util/flattenColorPalette");
+import { default as flattenColorPalette } from "tailwindcss/lib/util/flattenColorPalette";
 
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"],
-  theme: {
-    extend: {
-      colors: {
-        "site-bg": "#202020",
-      },
+export const content = ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"];
+export const theme = {
+  extend: {
+    colors: {
+      "site-bg": "#202020",
     },
   },
-  plugins: [addVariablesForColors],
 };
+export const plugins = [addVariablesForColors];
 
 function addVariablesForColors({ addBase, theme }) {
   let allColors = flattenColorPalette(theme("colors"));

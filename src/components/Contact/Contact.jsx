@@ -5,6 +5,7 @@ import "./Contact.css";
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import AnimationHook from "../../hooks/AnimationHook";
+
 const Contact = () => {
   const form = useRef();
 
@@ -13,56 +14,68 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        "service_a1kv667",
-        "template_fwr3m74",
+        "service_omd26rj", 
+        "template_but7asv",
         form.current,
-        "AttIBphA5FXBcYjpV"
-      )
+        "AQ2KWoZPUHE-EicFD"
       .then(
         (result) => {
-          console.log(result.text);
-          console.log("message sent");
+          console.log("Email sent successfully:", result.text);
           alert("Email sent successfully!");
           form.current.reset();
         },
         (error) => {
-          console.log(error.text);
+          console.error("Error sending email:", error.text);
+          alert("Failed to send email. Please try again.");
         }
       );
   };
 
   return (
     <AnimationHook>
-      <div id="contact" className=" font">
-        <div className=" mx-auto ">
+      <div id="contact" className="font">
+        <div className="mx-auto">
           <h1 className="heading text-center my-20">Let's Connect</h1>
           <div className="row dark:text-white">
             <div className="contactLeft font mb-8 dark:text-white">
-              {/* left icons */}
               <p className="mb-2 flex">
-                <HiMail className="text-2xl mr-2 hover:text-red-500"></HiMail>
-                <span> md.abusayeedifty@gmail.com</span>{" "}
+                <HiMail className="text-2xl mr-2 hover:text-red-500" />
+                <span>md.abusayeedifty@gmail.com</span>
               </p>
               <p className="mb-2 flex">
-                <RiWhatsappFill className="hover:text-green-600 text-2xl mr-2"></RiWhatsappFill>
+                <RiWhatsappFill className="hover:text-green-600 text-2xl mr-2" />
                 <span>(+880)1882021206</span>
               </p>
               <a
                 className="mb-2 flex"
                 href="https://www.linkedin.com/in/md-abu-sayeed-ifty-8b047b1a6/"
               >
-                <ImLinkedin className="mb-2 text-xl hover:text-blue-500 inline-flex mr-2 "></ImLinkedin>
+                <ImLinkedin className="mb-2 text-xl hover:text-blue-500 inline-flex mr-2" />
                 <span>LinkedIn</span>
               </a>
             </div>
             <div className="contactRight">
               <form ref={form} onSubmit={sendEmail}>
                 <label>Name</label>
-                <input type="text" name="user_name" required />
+                <input
+                  type="text"
+                  name="from_name"
+                  placeholder="Your Name"
+                  required
+                />
                 <label>Email</label>
-                <input type="email" name="user_email" required />
+                <input
+                  type="email"
+                  name="user_email"
+                  placeholder="Your Email"
+                  required
+                />
                 <label>Message</label>
-                <textarea name="message" required />
+                <textarea
+                  name="message"
+                  placeholder="Your Message"
+                  required
+                ></textarea>
                 <input
                   className="bg-black"
                   type="submit"
