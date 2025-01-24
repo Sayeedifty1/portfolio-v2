@@ -75,14 +75,79 @@ function Repository({
   );
 }
 
-export function Repos() {
-  let ref = useRef();
-  let [expanded, setExpanded] = useState(false);
-  let [showCollapseButton, setShowCollapseButton] = useState(false);
-  let [transition, setTransition] = useState(false);
-  let { ref: inViewRef, inView } = useInView({ threshold: 0 });
-  let initial = useRef(true);
+// export function Repos() {
+//   let ref = useRef();
+//   let [expanded, setExpanded] = useState(false);
+//   let [showCollapseButton, setShowCollapseButton] = useState(false);
+//   let [transition, setTransition] = useState(false);
+//   let { ref: inViewRef, inView } = useInView({ threshold: 0 });
+//   let initial = useRef(true);
 
+//   useIsomorphicLayoutEffect(() => {
+//     if (initial.current) {
+//       initial.current = false;
+//       return;
+//     }
+//     if (expanded) {
+//       ref.current.focus({ preventScroll: expanded });
+//     } else {
+//       ref.current.focus();
+//       ref.current.scrollIntoView();
+//     }
+//     if (expanded) {
+//       setShowCollapseButton(false);
+//     }
+//   }, [expanded]);
+
+//   useEffect(() => {
+//     setTimeout(() => setTransition(expanded), 0);
+//   }, [expanded]);
+
+//   useEffect(() => {
+//     if (!expanded || !inView) return;
+//     function onScroll() {
+//       let bodyRect = document.body.getBoundingClientRect();
+//       let rect = ref.current.getBoundingClientRect();
+//       let middle =
+//         rect.top + rect.height / 4 - bodyRect.top - window.innerHeight / 2;
+//       let isHalfWay = window.scrollY > middle;
+//       if (showCollapseButton && !isHalfWay) {
+//         setShowCollapseButton(false);
+//       } else if (!showCollapseButton && isHalfWay) {
+//         setShowCollapseButton(true);
+//       }
+//     }
+//     window.addEventListener("scroll", onScroll, { passive: true });
+//     return () => {
+//       window.removeEventListener("scroll", onScroll, { passive: true });
+//     };
+//   }, [expanded, showCollapseButton, inView]);
+
+//   // here i think i need to map the data from github api
+//   const [repositories, setRepositories] = useState([]);
+//   const [loading, setLoading] = useState(true);
+//   const getRepositories = async () => {
+//     fetch("https://api.github.com/users/Sayeedifty1/repos?per_page=100")
+//       .then((response) => response.json())
+//       .then((data) => {
+//         setRepositories(data);
+//       })
+//       .finally(() => setLoading(false));
+//   };
+
+//   useEffect(() => {
+//     getRepositories();
+//   }, []);
+
+export function Repos() {
+  const ref = useRef();
+  const [expanded, setExpanded] = useState(false);
+  const [showCollapseButton, setShowCollapseButton] = useState(false);
+  const [transition, setTransition] = useState(false);
+  const { ref: inViewRef, inView } = useInView({ threshold: 0 });
+  const initial = useRef(true);
+
+  // Handle focus and scrolling behavior when `expanded` changes
   useIsomorphicLayoutEffect(() => {
     if (initial.current) {
       initial.current = false;
@@ -99,40 +164,54 @@ export function Repos() {
     }
   }, [expanded]);
 
+  // Trigger transition effect when `expanded` changes
   useEffect(() => {
     setTimeout(() => setTransition(expanded), 0);
   }, [expanded]);
 
+  // Manage scroll behavior and show/hide collapse button based on scroll position
   useEffect(() => {
     if (!expanded || !inView) return;
-    function onScroll() {
-      let bodyRect = document.body.getBoundingClientRect();
-      let rect = ref.current.getBoundingClientRect();
-      let middle =
+
+    const onScroll = () => {
+      const bodyRect = document.body.getBoundingClientRect();
+      const rect = ref.current.getBoundingClientRect();
+      const middle =
         rect.top + rect.height / 4 - bodyRect.top - window.innerHeight / 2;
-      let isHalfWay = window.scrollY > middle;
+      const isHalfWay = window.scrollY > middle;
+
       if (showCollapseButton && !isHalfWay) {
         setShowCollapseButton(false);
       } else if (!showCollapseButton && isHalfWay) {
         setShowCollapseButton(true);
       }
-    }
+    };
+
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => {
       window.removeEventListener("scroll", onScroll, { passive: true });
     };
   }, [expanded, showCollapseButton, inView]);
 
-  // here i think i need to map the data from github api
+  // Fetch repositories from GitHub API
   const [repositories, setRepositories] = useState([]);
   const [loading, setLoading] = useState(true);
+
   const getRepositories = async () => {
-    fetch("https://api.github.com/users/Sayeedifty1/repos?per_page=100")
-      .then((response) => response.json())
-      .then((data) => {
-        setRepositories(data);
-      })
-      .finally(() => setLoading(false));
+    try {
+      const response = await fetch(
+        "https://api.github.com/users/Sayeedifty1/repos?per_page=100"
+      );
+      if (!response.ok) {
+        throw new Error(`Error: ${response.status} ${response.statusText}`);
+      }
+      const data = await response.json();
+      setRepositories(data);
+    } catch (error) {
+      console.error("Failed to fetch repositories:", error);
+    } finally {
+      setLoading(false);
+    }
   };
 
   useEffect(() => {
