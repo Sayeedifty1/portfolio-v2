@@ -1,9 +1,10 @@
 import { motion } from "framer-motion";
 import img from "/hero.jpg";
+
 const About = () => {
   return (
-    <section className="" id="about">
-      <div className="about__wrapper ">
+    <section id="about">
+      <div className="about__wrapper">
         <div className="about__heading">
           <h4>WHO AM I ?</h4>
           <h2>ABOUT ME</h2>
@@ -20,13 +21,12 @@ const About = () => {
                   duration: 0.2,
                 }}
               >
+                {/* Removed priority prop */}
                 <img
                   src={img}
                   alt="Ricardo portrait"
                   width="192"
                   height="192"
-                  quality="95"
-                  priority={true}
                   className="h-24 w-24 rounded-full object-cover border-[0.35rem] border-white shadow-xl"
                 />
               </motion.div>
@@ -60,9 +60,9 @@ const About = () => {
           >
             I'm a Frontend Developer with expertise of 1+ years of professional
             work experience.
-            <br /> I Strive to create original, Highly Enhance Websites and
+            <br /> I Strive to create original, Highly Enhanced Websites and
             impactful user experiences.
-            <br /> I’m quietly confident, naturally curious, and prepetually
+            <br /> I’m quietly confident, naturally curious, and perpetually
             working on improving my chops one <br /> design problem at a time.
           </motion.p>
         </div>
