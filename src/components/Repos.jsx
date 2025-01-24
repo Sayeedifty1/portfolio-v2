@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useIsomorphicLayoutEffect } from "../hooks/useIsomorphicLayoutEffect";
 import clsx from "clsx";
 import { useEffect, useRef, useState } from "react";
@@ -124,7 +125,6 @@ export function Repos() {
 
   // here i think i need to map the data from github api
   const [repositories, setRepositories] = useState([]);
-  console.log(repositories);
   const [loading, setLoading] = useState(true);
   const getRepositories = async () => {
     fetch("https://api.github.com/users/Sayeedifty1/repos?per_page=100")

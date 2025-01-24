@@ -1,5 +1,3 @@
-// src/components/Container.jsx
-import React from "react";
 import PropTypes from "prop-types";
 
 const Container = ({ children }) => {
