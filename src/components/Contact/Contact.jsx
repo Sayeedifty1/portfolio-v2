@@ -14,10 +14,11 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        "service_omd26rj", 
+        "service_omd26rj",
         "template_but7asv",
         form.current,
         "AQ2KWoZPUHE-EicFD"
+      )
       .then(
         (result) => {
           console.log("Email sent successfully:", result.text);
