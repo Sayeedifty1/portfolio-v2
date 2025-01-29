@@ -1,8 +1,3 @@
-/**
- * Note: Use position fixed according to your needs
- * Desktop navbar is better positioned at the bottom
- * Mobile navbar is better positioned at bottom right.
- **/
 import { IconLayoutNavbarCollapse } from "@tabler/icons-react";
 import {
   AnimatePresence,
@@ -11,14 +6,26 @@ import {
   useSpring,
   useTransform,
 } from "framer-motion";
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState } from "react";
 import { cn } from "../../lib/utils"; // Ensure this function is available
 
-// Custom navigation function
+// ✅ Custom navigation function that handles both internal and external links
 const navigateTo = (path) => {
-  window.history.pushState({}, "", path); // Update the URL without reloading
-  const navEvent = new PopStateEvent("popstate"); // Trigger the popstate event
-  window.dispatchEvent(navEvent);
+  if (path.startsWith("http") || path.startsWith("www")) {
+    // Open external links in a new tab
+    window.open(path, "_blank", "noopener,noreferrer");
+  } else {
+    // Smooth scroll for internal links
+    const targetElement = document.querySelector(path);
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: "smooth" });
+    } else {
+      // Update the URL without reloading for future navigations
+      window.history.pushState({}, "", path);
+      const navEvent = new PopStateEvent("popstate");
+      window.dispatchEvent(navEvent);
+    }
+  }
 };
 
 export const Navbar = ({ items, desktopClassName, mobileClassName }) => {
@@ -30,6 +37,7 @@ export const Navbar = ({ items, desktopClassName, mobileClassName }) => {
   );
 };
 
+// ✅ Mobile Navbar Component
 const FloatingDockMobile = ({ items, className }) => {
   const [open, setOpen] = useState(false);
 
@@ -59,7 +67,7 @@ const FloatingDockMobile = ({ items, className }) => {
                 transition={{ delay: (items.length - 1 - idx) * 0.05 }}
               >
                 <button
-                  onClick={() => navigateTo(item.href)} // Use the custom navigation function
+                  onClick={() => navigateTo(item.href)} // ✅ Works for both internal & external links
                   key={item.title}
                   className="h-10 w-10 rounded-full bg-gray-50 dark:bg-neutral-900 flex items-center justify-center"
                 >
@@ -80,6 +88,7 @@ const FloatingDockMobile = ({ items, className }) => {
   );
 };
 
+// ✅ Desktop Navbar Component
 const FloatingDockDesktop = ({ items, className }) => {
   let mouseX = useMotionValue(Infinity);
 
@@ -99,6 +108,7 @@ const FloatingDockDesktop = ({ items, className }) => {
   );
 };
 
+// ✅ Icon Container for Desktop Navbar
 function IconContainer({ mouseX, title, icon, href }) {
   let ref = useRef(null);
 
@@ -143,8 +153,6 @@ function IconContainer({ mouseX, title, icon, href }) {
 
   return (
     <button onClick={() => navigateTo(href)}>
-      {" "}
-      {/* Use button and custom navigation */}
       <motion.div
         ref={ref}
         style={{ width, height }}

@@ -4,11 +4,11 @@ import { FaArrowRight, FaSun } from "react-icons/fa";
 
 import {
   IconBrandGithub,
-  IconBrandX,
-  IconExchange,
+  IconBrandLinkedin,
+  IconBrandWhatsapp,
   IconHome,
-  IconNewSection,
-  IconTerminal2,
+  IconMail,
+  IconBrandFacebook,
 } from "@tabler/icons-react";
 import { Navbar } from "./ui/navbar";
 const Header = () => {
@@ -17,42 +17,11 @@ const Header = () => {
   };
   const links = [
     {
-      title: "Home",
+      title: "LinkedIn",
       icon: (
-        <IconHome className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <IconBrandLinkedin className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#contact",
-    },
-
-    {
-      title: "Products",
-      icon: (
-        <IconTerminal2 className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "#",
-    },
-    {
-      title: "Components",
-      icon: (
-        <IconNewSection className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "#",
-    },
-
-    {
-      title: "Changelog",
-      icon: (
-        <IconExchange className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "#",
-    },
-
-    {
-      title: "Twitter",
-      icon: (
-        <IconBrandX className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "#",
+      href: "https://www.linkedin.com/in/abu-sayeed-ifty/",
     },
     {
       title: "GitHub",
@@ -61,7 +30,29 @@ const Header = () => {
       ),
       href: "https://github.com/Sayeedifty1",
     },
+    {
+      title: "Gmail",
+      icon: (
+        <IconMail className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "https://mail.google.com/mail/?view=cm&fs=1&to=md.abusayeedifty@gmail.com",
+    },
+    {
+      title: "WhatsApp",
+      icon: (
+        <IconBrandWhatsapp className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "https://wa.link/a54fl8",
+    },
+    {
+      title: "Facebook",
+      icon: (
+        <IconBrandFacebook className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "https://www.facebook.com/sayeed.ifty/",
+    },
   ];
+
   return (
     <header id="#home" className="bg-[#202020] text-white p-8">
       <div className="text-center">
