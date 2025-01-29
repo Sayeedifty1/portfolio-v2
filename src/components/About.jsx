@@ -51,7 +51,8 @@ const About = () => {
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
           >
-            Hi ! I am <span className="gradient font-bold">Sayeed Ifty.</span>
+            Hi ! I am{" "}
+            <span className="gradient font-bold">Md. Abu Sayeed Ifty.</span>
           </motion.h3>
           <motion.p
             className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl"
