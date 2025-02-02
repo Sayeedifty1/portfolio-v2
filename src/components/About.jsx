@@ -6,8 +6,8 @@ const About = () => {
     <section id="about">
       <div className="about__wrapper">
         <div className="about__heading">
-          <h4>WHO AM I ?</h4>
-          <h2>ABOUT ME</h2>
+          <h4>WER BIN ICH ?</h4>
+          <h2>ÜBER MICH</h2>
           <hr />
         </div>
         <div className="about__content">
@@ -51,7 +51,7 @@ const About = () => {
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
           >
-            Hi ! I am{" "}
+            Hallo! Ich bin <br />
             <span className="gradient font-bold">Md. Abu Sayeed Ifty.</span>
           </motion.h3>
           <motion.p
@@ -59,12 +59,12 @@ const About = () => {
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
           >
-            I'm a Frontend Developer with expertise of 1+ years of professional
-            work experience.
-            <br /> I Strive to create original, Highly Enhanced Websites and
-            impactful user experiences.
-            <br /> I’m quietly confident, naturally curious, and perpetually
-            working on improving my chops one <br /> design problem at a time.
+            Ich bin ein Frontend-Entwickler mit über einem Jahr beruflicher
+            Erfahrung. Mein Ziel ist es, <br /> einzigartige, hochmoderne
+            Websites zu erstellen und beeindruckende Nutzererlebnisse zu <br />
+            gestalten. Ich bin selbstbewusst, von Natur aus neugierig und stets
+            bestrebt, meine Fähigkeiten <br /> mit jedem neuen Designproblem
+            weiterzuentwickeln.
           </motion.p>
         </div>
       </div>
