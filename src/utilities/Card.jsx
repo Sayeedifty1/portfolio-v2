@@ -35,7 +35,7 @@ const Card = ({
         </div> */}
 
         <div className="flex justify-between mt-4">
-          <button className="flex items-center hover:bg-black text-white text-lg px-4 py-2 rounded-full underline">
+          {/* <button className="flex items-center hover:bg-black text-white text-lg px-4 py-2 rounded-full underline">
             <svg
               className="w-4 h-4 mr-2"
               fill="white"
@@ -53,7 +53,7 @@ const Card = ({
               ></circle>
             </svg>
             Learn More
-          </button>
+          </button> */}
           <a
             href={websiteLink}
             target="_blank"
@@ -76,7 +76,7 @@ const Card = ({
                 strokeWidth="2"
               ></circle>
             </svg>
-            View Website
+            Zur Website
           </a>
         </div>
         <div>

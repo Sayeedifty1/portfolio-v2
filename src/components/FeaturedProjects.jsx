@@ -16,8 +16,9 @@ const FeaturedProjects = () => {
   return (
     <AnimationHook>
       <div className="text-white py-8 ">
-        <h4 className="small-heading">MY WORK</h4>
-        <h2 className="main-heading mb-[60px]">Featured Projects</h2>
+        <h4 className="small-heading">MEINE ARBEIT</h4>
+        <h2 className="main-heading mb-[60px]">Ausgewählte Projekte</h2>
+
         {/*  project cards  */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {displayedProjects.map((project) => (
@@ -45,7 +46,7 @@ const FeaturedProjects = () => {
             )}
             onClick={handleSeeMoreClick}
           >
-            {showAll ? "Collapse" : "Show more"}
+            {showAll ? "Collapse" : "Mehr anzeigen"}
           </button>
         </div>
       </div>
