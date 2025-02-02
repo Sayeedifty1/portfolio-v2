@@ -36,7 +36,7 @@ const Contact = () => {
     <AnimationHook>
       <div id="contact" className="font">
         <div className="mx-auto">
-          <h1 className="heading text-center my-20">Let's Connect</h1>
+          <h1 className="heading text-center my-20">Lass uns verbinden</h1>
           <div className="row dark:text-white">
             <div className="contactLeft font mb-8 dark:text-white">
               <p className="mb-2 flex">
@@ -61,26 +61,26 @@ const Contact = () => {
                 <input
                   type="text"
                   name="from_name"
-                  placeholder="Your Name"
+                  placeholder="Dein Name"
                   required
                 />
                 <label>Email</label>
                 <input
                   type="email"
                   name="user_email"
-                  placeholder="Your Email"
+                  placeholder="Deine E-Mail"
                   required
                 />
-                <label>Message</label>
+                <label>Nachricht</label>
                 <textarea
                   name="message"
-                  placeholder="Your Message"
+                  placeholder="Deine Nachricht"
                   required
                 ></textarea>
                 <input
                   className="bg-black"
                   type="submit"
-                  value="Send Message"
+                  value="Nachricht senden"
                 />
               </form>
             </div>
