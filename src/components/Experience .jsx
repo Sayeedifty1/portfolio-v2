@@ -1,20 +1,18 @@
-import React from "react";
-
 import "tailwindcss/tailwind.css";
 import AnimationHook from "../hooks/AnimationHook";
 
 const experiences = [
   {
-    year: "2022",
-    description: "Started Learning Full stack Development",
+    year: "2023",
+    description: "Begann das Praktikum bei Autas Tech",
   },
   {
     year: "2023",
-    description: "Got An Internship at Autas Tech",
+    description: "Befördert zum Junior Full Stack Engineer bei Autas Tech",
   },
   {
-    year: "2023",
-    description: "Promoted as a Junior Developer",
+    year: "2024",
+    description: "Fortsetzung als Junior Full Stack Engineer bei Autas Tech",
   },
 ];
 
@@ -23,7 +21,7 @@ const Experience = () => {
     <AnimationHook>
       <div className="flex gap-10 align-middle my-[100px]">
         <div className="text-center text-6xl font-bold text-outline text-site-bg">
-          EXPERIENCE
+          ERFAHRUNG
         </div>
         <div className="flex justify-between">
           {experiences.map((experience, index) => (
@@ -61,7 +59,7 @@ const Experience = () => {
                 </svg>
               </div>
               {/* <div className="border-t-2 border-dashed border-white w-16"></div> */}
-              <p>{experience.description}</p>
+              <p className="mr-5">{experience.description}</p>
             </div>
           ))}
         </div>

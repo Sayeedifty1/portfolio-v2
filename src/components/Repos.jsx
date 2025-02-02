@@ -235,7 +235,7 @@ export function Repos() {
           data-aos="zoom-in"
           className="text-xl lg:text-2xl text-center mt-4 mb-8"
         >
-          <span>Things</span> <span>I've been working on so far</span>
+          <span>Dinge</span> <span>an denen ich bisher gearbeitet habe</span>
         </h4>
         <div
           ref={inViewRef}
@@ -272,7 +272,7 @@ export function Repos() {
             )}
             onClick={() => setExpanded(!expanded)}
           >
-            {expanded ? "Okay, I get the point" : "Show more..."}
+            {expanded ? "Okay, ich verstehe den Punkt" : "Mehr anzeigen..."}
           </button>
         </div>
       </section>

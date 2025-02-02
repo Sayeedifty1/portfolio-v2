@@ -11,39 +11,44 @@ const cardData = [
       left: ["HTML & CSS", "JavaScript", "React", "UI/UX Design"],
     },
     description:
-      "Specializing in building beautiful, responsive, and user-friendly interfaces with the latest web technologies.",
+      "Spezialisiert auf die Erstellung schöner, responsiver und benutzerfreundlicher Oberflächen mit den neuesten Web-Technologien.",
   },
   {
     title: "Back End",
     icon: FaServer,
     categories: {
-      left: ["Node.js", "Express", "Databases", "APIs"],
+      left: ["Node.js", "Express", "Datenbanken", "APIs"],
     },
     description:
-      "Develop robust backend systems that support scalable and secure applications, with efficient database management.",
+      "Entwicklung robuster Backend-Systeme für skalierbare und sichere Anwendungen mit effizientem Datenbankmanagement.",
   },
   {
-    title: "Software Development",
+    title: "Software entwicklung",
     icon: FaLaptopCode,
     categories: {
       left: [
-        "Application Development",
-        "Testing & QA",
+        "Anwendungsentwicklung",
+        "Testing & Qualitätssicherung",
         "Deployment",
-        "Maintenance",
+        "Wartung",
       ],
     },
     description:
-      "End-to-end software development services, from planning and design to implementation, testing, and maintenance.",
+      "End-to-End-Softwareentwicklung – von Planung und Design bis hin zur Implementierung, Prüfung und Wartung.",
   },
   {
-    title: "Server Maintenance",
+    title: "Serverwartung",
     icon: FaTools,
     categories: {
-      left: ["Server Setup", "Security", "Monitoring", "Performance Tuning"],
+      left: [
+        "Servereinrichtung",
+        "Sicherheit",
+        "Überwachung",
+        "Performance-Optimierung",
+      ],
     },
     description:
-      "Comprehensive server maintenance services to ensure optimal performance, security, and reliability of your systems.",
+      "Umfassende Serverwartung für optimale Leistung, Sicherheit und Zuverlässigkeit Ihrer Systeme.",
   },
 ];
 
@@ -51,11 +56,12 @@ const Skills = () => {
   return (
     <div className="mt-[100px]">
       <div className="text-left mb-[50px]">
-        <h1 className="main-heading">Skills & Expertise</h1>
+        <h1 className="main-heading">Fähigkeiten & Expertise</h1>
         <p className="desc">
-          We build website that drives traffic, engagement and conversion.
+          Wir entwickeln Websites, die Traffic, Engagement und Conversions
+          steigern.
           <br />
-          Building the frictionless customer journey.
+          Für eine nahtlose Customer Journey.
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
