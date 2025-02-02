@@ -11,10 +11,10 @@ const Footer = () => {
         <div>
           <p className="text-2xl ">Sayeed</p>
           <p className="pt-6 pb-2 text-xl">Md. Abu Sayeed Ifty</p>
-          <p className="text-sm md:text-base">MERN Stack Developer.</p>
+          <p className="text-sm md:text-base">MERN-Stack-Entwickler</p>
         </div>
         <div>
-          <span className="text-xl font-bold">Social</span>
+          <span className="text-xl font-bold">Sozial</span>
           <div className="grid grid-flow-col gap-4 mt-6">
             <a href="https://github.com/Sayeedifty1">
               {" "}
@@ -34,8 +34,8 @@ const Footer = () => {
       </footer>
       <hr />
       <footer className="footer footer-center py-4 ">
-        <div>
-          <p>Copyright © 2024 - All right reserved by Md. Abu Sayeed</p>
+        <div className="text-center">
+          <p>Copyright © 2024 - Alle Rechte vorbehalten von Md. Abu Sayeed</p>
         </div>
       </footer>
     </div>
